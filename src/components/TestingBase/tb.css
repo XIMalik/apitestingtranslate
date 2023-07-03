@@ -1,0 +1,122 @@
+.moviegrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Default grid with 1 column */
+
+  /* Media query for screens with minimum width 600px */
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columns for screens 600px and above */
+  }
+
+  /* Media query for screens with minimum width 900px */
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* 3 columns for screens 900px and above */
+  }
+
+  grid-gap: 30px; /* Spacing between grid items */
+}
+
+.movieitem {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 500px;
+  width: full;
+  height: full;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.lds-ripple {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+.lds-ripple div {
+  border: 2px solid white;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 10s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+.additionaldata3 {
+  background-image: url(/cloudbg2.svg);
+}
+
+.condition h1 {
+  font-size: 13px;
+}
+.condition p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.459);
+}
+
+.condition {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.citybutton {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.448);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  transition-delay: 0s;
+}
+
+.citybutton:hover .overlay {
+  transform: translateY(0);
+  transition-delay: 1s;
+}
