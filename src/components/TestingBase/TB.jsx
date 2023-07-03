@@ -79,7 +79,7 @@ export default function TB() {
   ]);
 
   const apiKey = "67a106e90af3077610d79e25a1824771";
-  const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
   useEffect(() => {
     fetch(apiUrl)
