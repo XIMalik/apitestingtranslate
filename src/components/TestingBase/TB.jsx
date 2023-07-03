@@ -214,7 +214,7 @@ export default function TB() {
           <p>Loading..</p>
         )}
       </div> */}
-      <div className="weather bg-[#0d0d0d] relative flex justify-center items-center rounded-md w-[85%] h-full">
+      <div className="weather bg-gradient-to-br from-[#0d0d0d] to-black/80 relative flex justify-center items-center rounded-md w-[85%] h-full">
         {error && (
           <div className="absolute flex flex-col gap-3 justify-center items-center bg-white/10 backdrop-blur-xl rounded-md h-full w-full">
             <img src={lost} alt="" />
